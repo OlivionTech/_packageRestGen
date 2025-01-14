@@ -3,14 +3,9 @@
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use Bramf\CrudGenerator\Builders\Controller;
-use Bramf\CrudGenerator\Builders\Router;
-use Bramf\CrudGenerator\Builders\Model;
-use Bramf\CrudGenerator\Builders\ModelFactory;
-use Bramf\CrudGenerator\Builders\UnitTest;
 use Symfony\Component\Process\Process;
 
-class CrudMakeTableCommand extends Command{
+class RestTestCommand extends Command{
     const EXCEPTION_TABLES = [
         'users','crud_route_groups','migrations'
     ];
