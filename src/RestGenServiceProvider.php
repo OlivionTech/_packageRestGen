@@ -10,7 +10,7 @@ class RestGenServiceProvider extends ServiceProvider
         'RestTest' => 'command.rest.test',
     ];
 
-    /**
+    /** 
      * Perform post-registration booting of services.
      *
      * @return void
