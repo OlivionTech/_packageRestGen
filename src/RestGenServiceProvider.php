@@ -6,6 +6,10 @@ use Illuminate\Support\ServiceProvider;
 
 class RestGenServiceProvider extends ServiceProvider
 {
+    protected $commands = [
+        'RestTest' => 'command.rest.test',
+    ];
+
     /**
      * Perform post-registration booting of services.
      *
@@ -24,18 +28,47 @@ class RestGenServiceProvider extends ServiceProvider
         }
     }
 
-    /**
+    /** 
      * Register any package services.
      *
      * @return void
      */
     public function register(): void
     {
+        
         $this->mergeConfigFrom(__DIR__.'/../config/rest-gen.php', 'rest-gen');
 
         // Register the service the package provides.
         $this->app->singleton('rest-gen', function ($app) {
             return new RestGen;
+        });
+
+        $this->registerCommands($this->commands);
+    }
+
+    /**
+     * Register the given commands.
+     *
+     * @param array $commands
+     */
+    protected function registerCommands(array $commands)
+    {
+        foreach (array_keys($commands) as $command) {
+            $method = "register{$command}Command";
+
+            call_user_func_array([$this, $method], []);
+        }
+
+        $this->commands(array_values($commands));
+    }
+
+    /**
+     * Register the command.
+     */
+    protected function registerRestTestCommand()
+    {
+        $this->app->singleton('command.rest.test', function ($app) {
+            return new Console\RestTestCommand();
         });
     }
 
