@@ -1,4 +1,4 @@
-<?php namespace Bramf\CrudGenerator\Console;
+<?php namespace Olivion\RestGen\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
