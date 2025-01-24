@@ -48,7 +48,7 @@ class RestTestCommand extends Command{
 
             $params = $this->prepareParams($table);
             $this->line('CRUD for '.$table->table_name);
-            // (new Model($params))->build();
+            (new Model($params))->build();
             (new Controller($params))->build();
         }
         $this->newLine();
