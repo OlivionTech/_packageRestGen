@@ -17,28 +17,9 @@
         "flipbox/lumen-generator": "^9.2.0",
         "awobaz/compoships": "^2.2.3"
     },
-    "require-dev": {
-        "phpunit/phpunit": "~9.0",
-        "orchestra/testbench": "~7"
-    },
     "autoload": {
         "psr-4": {
             "Olivion\\RestGen\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Olivion\\RestGen\\Tests\\": "tests"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Olivion\\RestGen\\RestGenServiceProvider"
-            ],
-            "aliases": {
-                "RestGen": "Olivion\\RestGen\\Facades\\RestGen"
-            }
         }
     }
 }
