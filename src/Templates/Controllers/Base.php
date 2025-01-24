@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers\ParamService;
 
 use App\Http\Controllers\_rest\ParamController as _restController;
 
