@@ -12,7 +12,10 @@
     "homepage": "https://github.com/olivion/rest-gen",
     "keywords": ["Laravel", "RestGen"],
     "require": {
-        "doctrine/dbal": "^3.6"
+        "doctrine/dbal": "^3.6",
+        "zircote/swagger-php": "^4.7",
+        "flipbox/lumen-generator": "^9.2.0",
+        "awobaz/compoships": "^2.2.3"
     },
     "require-dev": {
         "phpunit/phpunit": "~9.0",
