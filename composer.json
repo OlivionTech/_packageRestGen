@@ -12,6 +12,7 @@
     "homepage": "https://github.com/olivion/rest-gen",
     "keywords": ["Laravel", "RestGen"],
     "require": {
+        "doctrine/dbal": "^3.6"
     },
     "require-dev": {
         "phpunit/phpunit": "~9.0",
