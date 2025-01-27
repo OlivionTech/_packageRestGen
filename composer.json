@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Olivion\\RestGen\\": "src/RestGen/"
+            "Olivion\\RestGen\\": "src/"
         }
     }
 }
