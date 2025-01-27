@@ -2,6 +2,17 @@
     "name": "olivion/rest-gen",
     "description": "RestFull Generating by Migration files",
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "hhttps://github.com/olivion/rest-gens"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Olivion\\RestGen\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "aladar",
@@ -16,10 +27,5 @@
         "zircote/swagger-php": "^4.7",
         "flipbox/lumen-generator": "^9.2.0",
         "awobaz/compoships": "^2.2.3"
-    },
-    "autoload": {
-        "psr-4": {
-            "Olivion\\RestGen\\": "src"
-        }
     }
 }
