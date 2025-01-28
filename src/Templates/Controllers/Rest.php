@@ -5,7 +5,7 @@ use Olivion\RestGen\Traits\RestActions;
 use App\Http\Controllers\Controller;
 
 class ParamController extends Controller{
-    const MODEL = 'App\Models\_Rest\ParamModel';
+    const MODEL = 'App\Models\_rest\ParamModel';
 
     use RestActions;
 
